@@ -1,5 +1,6 @@
 /dist
 .DS_Store
+.env
 /uploads
 /node_modules
 yarn-error.log
