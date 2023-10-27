@@ -33,20 +33,21 @@ jobs:
         port: 22
         script: |
               cd ${{ secrets.TARGET }}
-              FILE=.env
-              if test -f "$FILE"; 
-              then
-              rm .env
-              fi
-              git pull origin main
-              echo "DATABASE_TYPE=${{ secrets.DATABASE_TYPE }}" >> .env
-              echo "DATABASE_URL=${{ secrets.DATABASE_URL }}" >> .env
-              echo "MEDUSA_ADMIN_ONBOARDING_TYPE=${{ secrets.MEDUSA_ADMIN_ONBOARDING_TYPE }}" >> .emv
-              echo "STORE_CORS=${{ secrets.STORE_CORS }}" >> .env
-              echo "JWT_SECRET=${{ secrets.JWT_SECRET }}" >> .env
-              echo "COOKIE_SECRET=${{ secrets.COOKIE_SECRET }}" >> .env
-              echo "REDIS_URL=${{ secrets.REDIS_URL }}" >> .env
-              echo "CACHE_REDIS_URL=${{ secrets.CACHE_REDIS_URL }}" >> .env
-              echo "MEILISEARCH_HOST=${{ secrets.MEILISEARCH_HOST }}" >> .env
-              echo "MEILISEARCH_API_KEY=${{ secrets.MEILISEARCH_API_KEY }}" >> .env
-              git status
+              echo "Salut" >> text.txt
+     #         FILE=.env
+    #          if test -f "$FILE"; 
+    #          then
+    #          rm .env
+    #          fi
+    #          git pull origin main
+    #          echo "DATABASE_TYPE=${{ secrets.DATABASE_TYPE }}" >> .env
+    #          echo "DATABASE_URL=${{ secrets.DATABASE_URL }}" >> .env
+    #          echo "MEDUSA_ADMIN_ONBOARDING_TYPE=${{ secrets.MEDUSA_ADMIN_ONBOARDING_TYPE }}" >> .emv
+    #          echo "STORE_CORS=${{ secrets.STORE_CORS }}" >> .env
+    #          echo "JWT_SECRET=${{ secrets.JWT_SECRET }}" >> .env
+    #          echo "COOKIE_SECRET=${{ secrets.COOKIE_SECRET }}" >> .env
+    #          echo "REDIS_URL=${{ secrets.REDIS_URL }}" >> .env
+   #           echo "CACHE_REDIS_URL=${{ secrets.CACHE_REDIS_URL }}" >> .env
+  #            echo "MEILISEARCH_HOST=${{ secrets.MEILISEARCH_HOST }}" >> .env
+ #             echo "MEILISEARCH_API_KEY=${{ secrets.MEILISEARCH_API_KEY }}" >> .env
+#              git status
