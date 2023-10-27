@@ -24,15 +24,15 @@ jobs:
   #      source: "."
   #      target: ${{ secrets.TARGET }}
 
-    - name: Executing remote command via ssh
+    - name: Deploy using SSH
       uses: appleboy/ssh-action@master
-      with:
+      with: 
         host: ${{ secrets.VPS_HOST }}
         username: ${{ secrets.VPS_USERNAME }}
-        port: ${{ secrets.VPS_PORT }}
         key: ${{ secrets.SSHKEY }}
+        port: 22
         script: |
-              cd ${{secrets.TARGET}}
+              cd ${{ secret.TARGET }}
               FILE=.env
               if test -f "$FILE"; 
               then
