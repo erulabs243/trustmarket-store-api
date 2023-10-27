@@ -35,12 +35,13 @@ jobs:
         port: ${{ secrets.VPS_PORT }}
         script: |
               cd ${{ secrets.TARGET }}
-              FILE=.env
-              if test -f "$FILE"; 
-              then
-              rm .env
-              fi
-              echo "Salut" >> .env
+              echo "Text" >> text.txt
+   #           FILE=.env
+   #           if test -f "$FILE"; 
+   #           then
+   #           rm .env
+   #           fi
+   #           echo "Salut" >> .env
    #           git pull origin main
    #           echo "DATABASE_TYPE=${{ secrets.DATABASE_TYPE }}" >> .env
    #           echo "DATABASE_URL=${{ secrets.DATABASE_URL }}" >> .env
