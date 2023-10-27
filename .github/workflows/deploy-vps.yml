@@ -32,7 +32,7 @@ jobs:
         key: ${{ secrets.SSHKEY }}
         port: 22
         script: |
-              cd ${{ secret.TARGET }}
+              cd ${{ secrets.TARGET }}
               FILE=.env
               if test -f "$FILE"; 
               then
