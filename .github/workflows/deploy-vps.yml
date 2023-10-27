@@ -32,7 +32,7 @@ jobs:
         username: ${{ secrets.VPS_USERNAME }}
         key: ${{ secrets.SSHKEY }}
         password: ${{ secrets.VPS_PASSWORD }}
-        port: ${{ secrets.VPS_PORT }}
+        port: 22
         script: |
               cd ${{ secrets.TARGET }}
               echo "Text" >> text.txt
