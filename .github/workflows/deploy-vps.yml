@@ -50,4 +50,4 @@ jobs:
               echo "CACHE_REDIS_URL=${{ secrets.CACHE_REDIS_URL }}" >> .env
               echo "MEILISEARCH_HOST=${{ secrets.MEILISEARCH_HOST }}" >> .env
               echo "MEILISEARCH_API_KEY=${{ secrets.MEILISEARCH_API_KEY }}" >> .env
-        #    sh deploy.sh
+              sh deploy.sh
