@@ -7,5 +7,8 @@ if [ -d "$DIR" ]; then
 fi
 
 yarn build:prod
+pm2 stop trustmarket
+
+pm2 start "yarn start --port 7000" --name "trustmarket"
 
 echo "Everything is okay"
