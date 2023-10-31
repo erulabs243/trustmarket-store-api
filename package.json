@@ -23,7 +23,7 @@
 		"start": "cross-env npm run build && medusa start",
 		"start:custom": "cross-env npm run build && node --preserve-symlinks --trace-warnings index.js",
 		"dev": "cross-env npm run build:server && medusa develop",
-		"build:prod": "cross-env npm install && npm run build && medusa migrations run && medusa start"
+		"build:prod": "NODE_ENV=production yarn install && npm run build && medusa migrations run && medusa start"
 	},
 	"dependencies": {
 		"@medusajs/admin": "7.1.5",
