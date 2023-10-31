@@ -17,8 +17,7 @@
 		"jsx": "react-jsx",
 		"forceConsistentCasingInFileNames": true,
 		"resolveJsonModule": true,
-		"checkJs": false,
-		"types": ["jest", "node"]
+		"checkJs": false
 	},
 	"include": ["src/"],
 	"exclude": ["**/__fixtures__", "node_modules", "build", ".cache"]
