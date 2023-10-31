@@ -7,6 +7,6 @@ if [ -d "$DIR" ]; then
 fi
 
 yarn build:prod
-pm2 start "yarn start" --name trustmarket
+yarn start --port 9000
 
 echo "Everything is okay"
