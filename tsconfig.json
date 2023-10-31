@@ -21,11 +21,5 @@
 		"types": ["jest", "node"]
 	},
 	"include": ["src/"],
-	"exclude": [
-		"**/__tests__",
-		"**/__fixtures__",
-		"node_modules",
-		"build",
-		".cache"
-	]
+	"exclude": ["**/__fixtures__", "node_modules", "build", ".cache"]
 }
