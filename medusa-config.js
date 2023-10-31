@@ -12,6 +12,8 @@ switch (process.env.NODE_ENV) {
 		ENV_FILE_NAME = ".env.test";
 		break;
 	case "development":
+		ENV_FILE_NAME = ".env";
+		break;
 	default:
 		ENV_FILE_NAME = ".env";
 		break;
@@ -37,7 +39,7 @@ const plugins = [
 	"medusa-fulfillment-manual",
 	"medusa-payment-manual",
 	{
-		resolve: `@medusajs/file-local`,
+		resolve: "@medusajs/file-local",
 		options: {
 			upload_dir: "uploads",
 		},
@@ -53,7 +55,7 @@ const plugins = [
 		},
 	},
 	{
-		resolve: `medusa-plugin-meilisearch`,
+		resolve: "medusa-plugin-meilisearch",
 		options: {
 			// config object passed when creating an instance
 			// of the MeiliSearch client
@@ -110,9 +112,14 @@ const projectConfig = {
 	// redis_url: REDIS_URL
 };
 
+const featureFlags = {
+	product_categories: true,
+};
+
 /** @type {import('@medusajs/medusa').ConfigModule} */
 module.exports = {
 	projectConfig,
 	plugins,
 	modules,
+	featureFlags,
 };
