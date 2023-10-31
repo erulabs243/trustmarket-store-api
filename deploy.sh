@@ -7,6 +7,6 @@ if [ -d "$DIR" ]; then
 fi
 
 yarn build:prod
+pm2 start "yarn start" --name trustmarket
 
 echo "Everything is okay"
-
