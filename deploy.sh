@@ -7,6 +7,5 @@ if [ -d "$DIR" ]; then
 fi
 
 yarn build:prod
-yarn start --port 9000
 
 echo "Everything is okay"
