@@ -20,11 +20,5 @@
 		"checkJs": false
 	},
 	"include": ["src/", "src/**/*.spec.ts", "src/**/*.test.ts"],
-	"exclude": [
-		"**/__tests__",
-		"**/__fixtures__",
-		"node_modules",
-		"build",
-		".cache"
-	]
+	"exclude": ["**/__fixtures__", "node_modules", "build", ".cache"]
 }
