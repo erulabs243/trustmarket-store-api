@@ -7,7 +7,8 @@ if [ -d "$DIR" ]; then
 fi
 
 yarn build:prod
-pm2 stop trustmarket
+pm2 stop --silent trustmarket
+pm2 delete --silent trustmarket
 
 pm2 start "yarn start --port 7000" --name "trustmarket"
 
