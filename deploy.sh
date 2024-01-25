@@ -6,7 +6,7 @@ if [ -d "$DIR" ]; then
   rm -r node_modules  
 fi
 
-yarn build:prod
+bun build:prod
 pm2 stop --silent trustmarket
 pm2 delete --silent trustmarket
 
