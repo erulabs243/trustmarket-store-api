@@ -14,8 +14,8 @@
 	],
 	"scripts": {
 		"clean": "cross-env ./node_modules/.bin/rimraf dist",
-		"build": "cross-env npm run clean && npm run build:server && npm run build:admin",
-		"build:server": "cross-env npm run clean && tsc -p tsconfig.server.json",
+		"build": "cross-env bun run clean && bun run build:server && bun run build:admin",
+		"build:server": "cross-env bun run clean && tsc -p tsconfig.server.json",
 		"build:admin": "cross-env medusa-admin build --deployment",
 		"watch": "cross-env tsc --watch",
 		"test": "cross-env jest",
@@ -84,6 +84,5 @@
 		"collectCoverageFrom": ["**/*.(t|j)s"],
 		"coverageDirectory": "./coverage",
 		"testEnvironment": "node"
-	},
-	"packageManager": "yarn@3.6.4"
+	}
 }
