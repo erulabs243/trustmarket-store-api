@@ -47,6 +47,7 @@ jobs:
               echo "DATABASE_URL=${{ secrets.DATABASE_URL }}" >> .env
               echo "MEDUSA_ADMIN_ONBOARDING_TYPE=${{ secrets.MEDUSA_ADMIN_ONBOARDING_TYPE }}" >> .emv
               echo "STORE_CORS=${{ secrets.STORE_CORS }}" >> .env
+              echo "ADMIN_CORS=${{ secrets.ADMIN_CORS }}" >> .env
               echo "JWT_SECRET=${{ secrets.JWT_SECRET }}" >> .env
               echo "COOKIE_SECRET=${{ secrets.COOKIE_SECRET }}" >> .env
               echo "REDIS_URL=${{ secrets.REDIS_URL }}" >> .env
