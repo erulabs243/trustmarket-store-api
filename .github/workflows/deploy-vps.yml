@@ -45,7 +45,7 @@ jobs:
               fi
               echo "DATABASE_TYPE=${{ secrets.DATABASE_TYPE }}" >> .env
               echo "DATABASE_URL=${{ secrets.DATABASE_URL }}" >> .env
-              echo "MEDUSA_ADMIN_ONBOARDING_TYPE=${{ secrets.MEDUSA_ADMIN_ONBOARDING_TYPE }}" >> .emv
+              echo "MEDUSA_ADMIN_ONBOARDING_TYPE=${{ secrets.MEDUSA_ADMIN_ONBOARDING_TYPE }}" >> .env
               echo "STORE_CORS=${{ secrets.STORE_CORS }}" >> .env
               echo "ADMIN_CORS=${{ secrets.ADMIN_CORS }}" >> .env
               echo "JWT_SECRET=${{ secrets.JWT_SECRET }}" >> .env
