@@ -11,7 +11,7 @@ const adminMiddleware = (
 	next: MedusaNextFunction,
 ) => {
 	req.headers["access-control-allow-origin"] = process.env.ADMIN_CORS;
-	res.setHeader("access-control-allow-origin", process.env.ADMIN_CORS);
+	res.setHeader("Access-Control-Allow-Origin", process.env.ADMIN_CORS);
 
 	next();
 };
