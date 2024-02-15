@@ -7,8 +7,8 @@ if [ -d "$DIR" ]; then
 fi
 
 bun build:prod
-# pm2 stop --silent trustmarket
-# pm2 delete --silent trustmarket
+pm2 stop --silent trustmarket
+pm2 delete --silent trustmarket
 
 # Start pm2
 pm2 start "bun start" --watch --name "trustmarket"
