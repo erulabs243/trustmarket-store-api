@@ -11,6 +11,6 @@ pm2 stop --silent trustmarket
 pm2 delete --silent trustmarket
 
 # Start pm2
-pm2 start "bun start" --watch --name "trustmarket"
+pm2 start "bun start --port 7000" --watch --name "trustmarket"
 
 echo "Everything is okay"
