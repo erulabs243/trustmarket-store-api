@@ -38,6 +38,8 @@ jobs:
         port: ${{ secrets.VPS_PORT }}
         script: |
               cd ${{ secrets.TARGET }}
+              mv package.json package-dev.json
+              mv package-npm.json package.json
               FILE=.env
               if test -f "$FILE"; 
               then
