@@ -55,5 +55,10 @@ jobs:
               echo "MEILISEARCH_HOST=${{ secrets.MEILISEARCH_HOST }}" >> .env
               echo "MEILISEARCH_API_KEY=${{ secrets.MEILISEARCH_API_KEY }}" >> .env
               echo "BACKEND_URL=${{ secrets.BACKEND_URL }}" >> .env
-              chmod +x deploy.sh
-              sh deploy.sh
+              echo "Install dependencies"
+              bun install
+
+              echo "Start for production"
+              pm2 restart "bun start --port 7222" --name "trustmarket"
+
+              echo "Everything seems to work fine"
