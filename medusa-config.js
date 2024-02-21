@@ -52,7 +52,7 @@ const plugins = [
 		options: {
 			// serve: process.env.NODE_ENV === "development",
 			autoRebuild: true,
-			path: "/admin",
+			// path: "/admin",
 			develop: {
 				open: process.env.OPEN_BROWSER !== "false",
 			},

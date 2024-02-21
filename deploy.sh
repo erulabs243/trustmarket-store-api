@@ -1,16 +1,14 @@
 #!/bin/sh
 echo "Install dependencies"
 
-DIR="node_modules"
-if [ -d "$DIR" ]; then
-  rm -r node_modules  
-fi
+# DIR="node_modules"
+# if [ -d "$DIR" ]; then
+#   rm -r node_modules  
+# fi
 
-bun build:prod
-pm2 stop --silent trustmarket
-pm2 delete --silent trustmarket
+# bun build:prod
 
 # Start pm2
-pm2 start "npm start --port 7000" --watch --name "trustmarket"
+pm2 restart ecosystem.config.js --env production
 
 echo "Everything is okay"
